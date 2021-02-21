@@ -47,3 +47,7 @@ ALUNOS:
 DANIEL LUCAS CABRAL BESERRA
 DANIEL TEODOLINO BARBOSA TORRES
 MÁRCIA SOARES MARQUES
+
+
+DICAS PARA RODAR O PROJETO:
+    nom install dentro da pasta ContratosAPP para instalar os node_modules
