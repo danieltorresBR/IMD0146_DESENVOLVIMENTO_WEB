@@ -1,6 +1,6 @@
 namespace Contratos.WebAPI.Model
 {
-    public class Contratos
+    public class DocumentoContratual
     {
         public int ContratoID { get; set; }
         public string DataInicioVigencia { get; set; }
