@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\ContratosAPI\\ContratosAPI.csproj",
-      "projectName": "ContratosAPI",
-      "projectPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\ContratosAPI\\ContratosAPI.csproj",
+      "projectUniqueName": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\ContratosWebAPI\\ContratosWebAPI.csproj",
+      "projectName": "ContratosWebAPI",
+      "projectPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\ContratosWebAPI\\ContratosWebAPI.csproj",
       "packagesPath": "C:\\Users\\danieltorresdev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\ContratosAPI\\obj\\",
+      "outputPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\ContratosWebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danieltorresdev\\AppData\\Roaming\\NuGet\\NuGet.Config"

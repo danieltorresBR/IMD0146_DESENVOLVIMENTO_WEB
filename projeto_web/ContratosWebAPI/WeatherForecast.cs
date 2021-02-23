@@ -1,6 +1,6 @@
 using System;
 
-namespace ContratosAPI
+namespace ContratosWebAPI
 {
     public class WeatherForecast
     {
