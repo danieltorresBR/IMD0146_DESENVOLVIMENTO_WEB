@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\ContratosWebAPI\\ContratosWebAPI.csproj": {}
+    "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\Contratos.WebAPI\\Contratos.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\ContratosWebAPI\\ContratosWebAPI.csproj": {
+    "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\Contratos.WebAPI\\Contratos.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\ContratosWebAPI\\ContratosWebAPI.csproj",
-        "projectName": "ContratosWebAPI",
-        "projectPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\ContratosWebAPI\\ContratosWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\Contratos.WebAPI\\Contratos.WebAPI.csproj",
+        "projectName": "Contratos.WebAPI",
+        "projectPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\Contratos.WebAPI\\Contratos.WebAPI.csproj",
         "packagesPath": "C:\\Users\\danieltorresdev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\ContratosWebAPI\\obj\\",
+        "outputPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\Contratos.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danieltorresdev\\AppData\\Roaming\\NuGet\\NuGet.Config"

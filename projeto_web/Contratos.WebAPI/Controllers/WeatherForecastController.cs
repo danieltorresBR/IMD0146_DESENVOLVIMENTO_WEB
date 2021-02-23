@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace ContratosWebAPI.Controllers
+namespace Contratos.WebAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("teste/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

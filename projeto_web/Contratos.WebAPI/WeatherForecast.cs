@@ -1,6 +1,6 @@
 using System;
 
-namespace ContratosWebAPI
+namespace Contratos.WebAPI
 {
     public class WeatherForecast
     {
