@@ -14,10 +14,10 @@ namespace Contratos.WebAPI.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<DocumentoContratual>> Get()
+        public ActionResult<IEnumerable<DocumentoContratualModelo>> Get()
         {
-            return new DocumentoContratual[] {
-                new DocumentoContratual() {
+            return new DocumentoContratualModelo[] {
+                new DocumentoContratualModelo() {
                     ContratoID = 1,
                     DataInicioVigencia = DateTime.Now.ToString("dd/MM/yyyy"),
                     DataFimVigencia = DateTime.Now.AddDays(365).ToString("dd/MM/yyyy"),
@@ -25,7 +25,7 @@ namespace Contratos.WebAPI.Controllers
                     LinkRedmine = "https://redmine.tce.rn.gov.br/",
                     ObjetoAcordo = "Aqui é o objetivo que será objetivado para se ter um objeto"
                 },
-                new DocumentoContratual() {
+                new DocumentoContratualModelo() {
                     ContratoID = 2,
                     DataInicioVigencia = DateTime.Now.ToString("dd/MM/yyyy"),
                     DataFimVigencia = DateTime.Now.AddDays(183).ToString("dd/MM/yyyy"),
@@ -38,10 +38,10 @@ namespace Contratos.WebAPI.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<DocumentoContratual> Get(int id)
+        public ActionResult<DocumentoContratualModelo> Get(int id)
         {
-            return new DocumentoContratual[] {
-                new DocumentoContratual() {
+            return new DocumentoContratualModelo[] {
+                new DocumentoContratualModelo() {
                     ContratoID = 1,
                     DataInicioVigencia = DateTime.Now.ToString("dd/MM/yyyy"),
                     DataFimVigencia = DateTime.Now.AddDays(365).ToString("dd/MM/yyyy"),
@@ -49,7 +49,7 @@ namespace Contratos.WebAPI.Controllers
                     LinkRedmine = "https://redmine.tce.rn.gov.br/",
                     ObjetoAcordo = "Aqui é o objetivo que será objetivado para se ter um objeto"
                 },
-                new DocumentoContratual() {
+                new DocumentoContratualModelo() {
                     ContratoID = 2,
                     DataInicioVigencia = DateTime.Now.ToString("dd/MM/yyyy"),
                     DataFimVigencia = DateTime.Now.AddDays(183).ToString("dd/MM/yyyy"),
