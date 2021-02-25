@@ -10,13 +10,13 @@ namespace Contratos.WebAPI.Migrations
                 name: "DocumentosContratuais",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Autoincrement", true),
-                    DataInicioVigencia = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DataFimVigencia = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProcessoTCE = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LinkRedmine = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ObjetoAcordo = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    DataInicioVigencia = table.Column<string>(type: "TEXT", nullable: true),
+                    DataFimVigencia = table.Column<string>(type: "TEXT", nullable: true),
+                    ProcessoTCE = table.Column<string>(type: "TEXT", nullable: true),
+                    LinkRedmine = table.Column<string>(type: "TEXT", nullable: true),
+                    ObjetoAcordo = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

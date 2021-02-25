@@ -28,7 +28,7 @@ namespace Contratos.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(
-                x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
         }
 
