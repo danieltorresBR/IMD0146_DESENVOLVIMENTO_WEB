@@ -18,7 +18,7 @@ namespace Contratos.WebAPI.Controllers
         {
             return new DocumentoContratualModelo[] {
                 new DocumentoContratualModelo() {
-                    ContratoID = 1,
+                    Id = 1,
                     DataInicioVigencia = DateTime.Now.ToString("dd/MM/yyyy"),
                     DataFimVigencia = DateTime.Now.AddDays(365).ToString("dd/MM/yyyy"),
                     ProcessoTCE = "2021-0001-0002",
@@ -26,7 +26,7 @@ namespace Contratos.WebAPI.Controllers
                     ObjetoAcordo = "Aqui é o objetivo que será objetivado para se ter um objeto"
                 },
                 new DocumentoContratualModelo() {
-                    ContratoID = 2,
+                    Id = 2,
                     DataInicioVigencia = DateTime.Now.ToString("dd/MM/yyyy"),
                     DataFimVigencia = DateTime.Now.AddDays(183).ToString("dd/MM/yyyy"),
                     ProcessoTCE = "2021-0001-0002",
@@ -42,7 +42,7 @@ namespace Contratos.WebAPI.Controllers
         {
             return new DocumentoContratualModelo[] {
                 new DocumentoContratualModelo() {
-                    ContratoID = 1,
+                    Id = 1,
                     DataInicioVigencia = DateTime.Now.ToString("dd/MM/yyyy"),
                     DataFimVigencia = DateTime.Now.AddDays(365).ToString("dd/MM/yyyy"),
                     ProcessoTCE = "2021-0001-0002",
@@ -50,14 +50,14 @@ namespace Contratos.WebAPI.Controllers
                     ObjetoAcordo = "Aqui é o objetivo que será objetivado para se ter um objeto"
                 },
                 new DocumentoContratualModelo() {
-                    ContratoID = 2,
+                    Id = 2,
                     DataInicioVigencia = DateTime.Now.ToString("dd/MM/yyyy"),
                     DataFimVigencia = DateTime.Now.AddDays(183).ToString("dd/MM/yyyy"),
                     ProcessoTCE = "2021-0001-0002",
                     LinkRedmine = "https://redmine.tce.rn.gov.br/",
                     ObjetoAcordo = "Aqui é o objetivo que será objetivado para se ter um objeto"
                 }
-            }.FirstOrDefault(x => x.ContratoID == id);
+            }.FirstOrDefault(x => x.Id == id);
         }
     }
 }
