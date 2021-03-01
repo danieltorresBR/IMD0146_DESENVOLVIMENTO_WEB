@@ -1,17 +1,12 @@
-<p>
-  contratos works!
-</p>
-
-
 <div *ngFor="let contrato of contratos">
-  {{contrato.DataInicioVigencia}}
+  <strong>Data e início da vigência:</strong>  {{contrato.dataInicioVigencia}}
   <br>
-  {{contrato.DataFimVigencia}}
+  <strong>Data de fim da vigência:</strong>  {{contrato.dataFimVigencia}}
   <br>
-  {{contrato.ProcessoTCE}}
+  <strong>Nº do Processo TCE:</strong>  {{contrato.processoTCE}}
   <br>
-  {{contrato.LinkRedmine}}
+  <strong>Link do Redmine:</strong>  {{contrato.linkRedmine}}
   <br>
-  {{contrato.ObjetoAcordo}}
+  <strong>Objeto de Acordo:</strong>  {{contrato.objetoAcordo}}
   <hr>
 </div>

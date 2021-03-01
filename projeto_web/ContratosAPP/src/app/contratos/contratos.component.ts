@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,36 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContratosComponent implements OnInit {
 
-  contratos: any = [
-    {
-      Id: 10,
-      DataInicioVigencia: '01/01/2010',
-      DataFimVigencia: '01/01/2011',
-      ProcessoTCE: '00010-00011',
-      LinkRedmine: 'www.testeFront.com.br',
-      ObjetoAcordo: 'Isso é um teste no Front'
-    },
-    {
-      Id: 12,
-      DataInicioVigencia: '01/05/2011',
-      DataFimVigencia: '01/05/2012',
-      ProcessoTCE: '00010-00022',
-      LinkRedmine: 'www.testeFront.com.br',
-      ObjetoAcordo: 'Isso é um teste no Front com Id12'
-    },
-    {
-      Id: 15,
-      DataInicioVigencia: '01/01/2015',
-      DataFimVigencia: '01/01/2016',
-      ProcessoTCE: '00010-00020',
-      LinkRedmine: 'www.testeFront.com.br/TCE',
-      ObjetoAcordo: 'Isso é um teste no Front id15'
-    }
-  ];
+  contratos: any;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
+  // tslint:disable-next-line:typedef
   ngOnInit() {
+    this.getContratos();
   }
 
+  // tslint:disable-next-line:typedef
+  getContratos() {
+    this.http.get('https://localhost:5001/api/values').subscribe(response => {
+      this.contratos = response;
+      console.log(response);
+    }, error => {
+      console.log(error);
+    }
+    );
+  }
 }
