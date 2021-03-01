@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+gVcTl2XFbe4If8bRan6H4Vp8FLDIojZIx1rePDFFbDUqD2GeOnOBXLm5tGT1C8x9IoeeK9S2vVDq3V1k7aRJg==",
+  "dgSpecHash": "8CZ+E7eSfnczKR26hwLDrEZFCbRIAOLYKiVnqFjIQ5AV57ynlekxp6ehnmiFfNi8yo/uwJg2LCxgLdS12Urbfw==",
   "success": true,
   "projectFilePath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web\\Contratos.WebAPI\\Contratos.WebAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\danieltorresdev\\.nuget\\packages\\bootstrap\\5.0.0-beta2\\bootstrap.5.0.0-beta2.nupkg.sha512",
     "C:\\Users\\danieltorresdev\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\danieltorresdev\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\danieltorresdev\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

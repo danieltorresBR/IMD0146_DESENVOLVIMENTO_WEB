@@ -8,13 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContratosComponent implements OnInit {
 
-  contratos: any;
+  _filtroLista!: string;
+  get filtroLista(): string {
+    return this._filtroLista;
+  }
 
+  set filtroLista(value: string) {
+    this._filtroLista = value;
+    this.contratosFiltrados = this.filtroLista ? this.filtrarContratos(this.filtroLista) : this.contratos;
+  }
+
+  contratosFiltrados: any = [];
+  contratos: any = [];
   constructor(private http: HttpClient) { }
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
     this.getContratos();
+  }
+
+  filtrarContratos(filtrarPor: string): any {
+    filtrarPor = filtrarPor;
+    return this.contratos.filter(
+      contrato => contrato.processoTCE.indexOf(filtrarPor) !== -1
+    );
   }
 
   // tslint:disable-next-line:typedef
