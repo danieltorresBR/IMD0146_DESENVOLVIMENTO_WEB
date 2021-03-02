@@ -38,6 +38,7 @@ export class ContratosComponent implements OnInit {
   getContratos() {
     this.http.get('https://localhost:5001/api/values').subscribe(response => {
       this.contratos = response;
+      this.contratosFiltrados = this.contratos;
       console.log(response);
     }, error => {
       console.log(error);
