@@ -15,5 +15,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Contratos.Domain\Contratos.Domain.csproj" />
+    <ProjectReference Include="..\Contratos.Repository\Contratos.Repository.csproj" />
+  </ItemGroup>
+
 
 </Project>
