@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ContratoService } from '../_services/contrato.service';
 
 @Component({
   selector: 'app-contratos',
@@ -7,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contratos.component.scss']
 })
 export class ContratosComponent implements OnInit {
+  contratosFiltrados: any = [];
+  contratos: any = [];
+  modalRef!: BsModalRef;
 
   _filtroLista!: string;
+
+  constructor(
+    private contratoService: ContratoService
+    // tslint:disable-next-line:align
+    , private modalService: BsModalService
+    ) { }
+
   get filtroLista(): string {
     return this._filtroLista;
   }
@@ -18,9 +29,10 @@ export class ContratosComponent implements OnInit {
     this.contratosFiltrados = this.filtroLista ? this.filtrarContratos(this.filtroLista) : this.contratos;
   }
 
-  contratosFiltrados: any = [];
-  contratos: any = [];
-  constructor(private http: HttpClient) { }
+  // tslint:disable-next-line:typedef
+  openModal(template: TemplateRef<any>){
+    this.modalRef = this.modalService.show(template);
+  }
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
@@ -36,7 +48,8 @@ export class ContratosComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   getContratos() {
-    this.http.get('https://localhost:5001/api/values').subscribe(response => {
+    this.contratoService.getAllContratos().subscribe(
+      response => {
       this.contratos = response;
       this.contratosFiltrados = this.contratos;
       console.log(response);
