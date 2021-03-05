@@ -1,8 +1,10 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { from } from 'rxjs';
 import { ContratoService } from '../_services/contrato.service';
+
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { from } from 'rxjs';
+
 
 @Component({
   selector: 'app-contratos',
@@ -12,7 +14,6 @@ import { ContratoService } from '../_services/contrato.service';
 export class ContratosComponent implements OnInit {
   contratosFiltrados: any = [];
   contratos: any = [];
-  modalRef!: BsModalRef;
   registerForm!: FormGroup;
   registerFormControl!: FormControl;
 
@@ -39,8 +40,8 @@ export class ContratosComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  openModal(template: TemplateRef<any>){
-    this.modalRef = this.modalService.show(template);
+  openModal(template: any){
+    template.show();
   }
 
   // tslint:disable-next-line:typedef
@@ -60,15 +61,16 @@ export class ContratosComponent implements OnInit {
   validation(){
     this.registerForm = new FormGroup({
       // tslint:disable-next-line:new-parens
-      dataInicioVigencia: new FormControl,
+      dataInicioVigencia: new FormControl('', Validators.required),
       // tslint:disable-next-line:new-parens
-      dataFimVigencia: new FormControl,
+      dataFimVigencia: new FormControl('', Validators.required),
       // tslint:disable-next-line:new-parens
-      processoTCE: new FormControl,
+      processoTCE: new FormControl('', Validators.required),
       // tslint:disable-next-line:new-parens
-      linkRedmine: new FormControl,
+      linkRedmine: new FormControl('', Validators.required),
       // tslint:disable-next-line:new-parens
-      objetoAcordo: new FormControl,
+      objetoAcordo: new FormControl('',
+        [Validators.required, Validators.minLength(4), Validators.maxLength(50)]),
     });
   }
 

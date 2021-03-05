@@ -1,9 +1,19 @@
-<div class="form-inline">
-  <div class="form-group mb-2">
-    <label class="mr-2"> Filtrar: </label> <input type="text" class="form-group mx-sm-3 mb-2" placeholder="Nº do Processo TCE" 
-    [(ngModel)]="filtroLista">
+<div class="d-flex">
+  <div class="form-inline mr-auto">
+    <div class="form-group mb-2">
+      <label class="mr-2"> Filtrar: </label> <input type="text" class="form-group mx-sm-3 mb-2" placeholder="Nº do Processo TCE" 
+      [(ngModel)]="filtroLista">
+    </div>
   </div>
 </div>
+<div>
+  <button class="btn btn-outline-primary" (click)="openModal(template)">
+    <i class="bi bi-plus-circle"></i>&nbsp;
+    Novo Contrato
+  </button>
+</div>
+
+
 <h3>Filtro: {{filtroLista}}</h3>
 <table class="table table-striped">
   <thead class="thead-dark">
@@ -51,67 +61,97 @@
 </tfoot>
 </table>
 
-<ng-template #template>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
-    <button type="button" class="close pull-right"
-    aria-label="Close" (click)="modalRef.hide()">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<div class="modal-body">
-  This is a modal.
-</div>
-</ng-template>
 
-<form [formGroup]="registerForm">
-  
-  <div class="form-row">
-    <div class="form-group col-md-4">
-      <label>Data de início da vigência</label>
-      <input type="text" class="form-control" formControlName="dataInicioVigencia">
+<div bsModal #template="bs-modal" class="modal fade" tabindex="-1"
+role="dialog" aria-labelledby="dialog-sizes-name1">
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 id="dialog-sizes-name1" class="modal-title pull-left">Large modal</h4>
+      <button type="button" class="close pull-right" (click)="template.hide()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-  </div>  
-  
-  <div class="form-row">
-    <div class="form-group col-md-4">
-      <label>Data de fim da vigência</label>
-      <input type="text" class="form-control" formControlName="dataFimVigencia">
+    <div class="modal-body">
+      <form [formGroup]="registerForm">
+        
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label>Data de início da vigência</label>
+            <input type="text" class="form-control"
+            ngClass="{'is-invalid': registerForm.get('dataInicioVigencia').errors && registerForm.get('dataInicioVigencia').touched}"
+            formControlName="dataInicioVigencia">
+            <div class="invalid-feedback">
+              Data de início é obrigátório.
+            </div>
+          </div>
+        </div>  
+        
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label>Data de fim da vigência</label>
+            <input type="text" class="form-control"
+            ngClass="{'is-invalid': registerForm.get('dataFimVigencia').errors && registerForm.get('dataFimVigencia').touched}"
+            formControlName="dataFimVigencia">
+            <div class="invalid-feedback">
+              Data de fim é obrigátório.
+            </div>
+          </div>
+        </div>  
+        
+        <div class="form-row">
+          <div class="form-group col-md-8">
+            <label>Nº do Processo TCE</label>
+            <input type="text" class="form-control"
+            ngClass="{'is-invalid': registerForm.get('processoTCE').errors && registerForm.get('processoTCE').touched}"
+            formControlName="processoTCE">
+            <div class="invalid-feedback">
+              Nº do Processo TCE é obrigátório.
+            </div>
+          </div>
+        </div>  
+        
+        <div class="form-row">
+          <div class="form-group col-md-8">
+            <label>Link do Redmine</label>
+            <input type="text" class="form-control"
+            ngClass="{'is-invalid': registerForm.get('linkRedmine').errors && registerForm.get('linkRedmine').touched}"
+            formControlName="linkRedmine">
+            <div class="invalid-feedback">
+              Link do Redmine é obrigátório.
+            </div>
+          </div>
+        </div>  
+        
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Objeto de Acordo</label>
+            <input type="text" class="form-control"
+            ngClass="{'is-invalid': registerForm.get('objetoAcordo').errors && registerForm.get('objetoAcordo').touched}"
+            formControlName="objetoAcordo">
+            <div class="invalid-feedback">
+              Objeto de Acordo é obrigátório.
+            </div>
+          </div>
+        </div>  
+        
+      </form>
+      <br>
+      
+      <br>
+      <br>
+      
+      <p>Form Values: {{registerForm.value | json}}</p>
+      <p>Form Status: {{registerForm.status | json}}</p>
     </div>
-  </div>  
-  
-  <div class="form-row">
-    <div class="form-group col-md-8">
-      <label>Nº do Processo TCE</label>
-      <input type="text" class="form-control" formControlName="processoTCE">
+    <div class="modal-footer d-flex">
+      <button class="btn btn-secondary" (click)="template.hide()">
+        Fechar
+      </button>
+      <button class="btn btn-primary ml-auto" [disabled]="!registerForm.valid" (click)="salvarAlteracao()">
+        Salvar Alterações
+      </button>
     </div>
-  </div>  
-  
-  <div class="form-row">
-    <div class="form-group col-md-8">
-      <label>Link do Redmine</label>
-      <input type="text" class="form-control" formControlName="linkRedmine">
-    </div>
-  </div>  
-  
-  <div class="form-row">
-    <div class="form-group col-md-12">
-      <label>Objeto de Acordo</label>
-      <input type="text" class="form-control" formControlName="objetoAcordo">
-    </div>
-  </div>  
-  
-</form>
-<br>
-<button class="btn btn-secondary" (click)="openModal(template)">
-  Fechar
-</button>
-<button class="btn btn-primary" (click)="salvarAlteracao()">
-  Salvar Alterações
-</button>
-<br>
-<br>
-
-<!-- <p>Form Values: {{registerForm.value | json}}</p>
-  <p>Form Status: {{registerForm.status | json}}</p> -->
-  
+  </div>
+</div>
+</div>
