@@ -7,7 +7,7 @@ import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
+import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 
 
 

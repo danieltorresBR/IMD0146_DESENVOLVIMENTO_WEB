@@ -58,19 +58,36 @@ export class ContratosComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   validation(){
-    this.registerForm = this.fb.group({
+    this.registerForm = new FormGroup({
       // tslint:disable-next-line:new-parens
-      Data_de_início_da_vigência: ['', Validators.required],
+      dataInicioVigencia: new FormControl,
       // tslint:disable-next-line:new-parens
-      Data_de_fim_da_vigência: ['', Validators.required],
+      dataFimVigencia: new FormControl,
       // tslint:disable-next-line:new-parens
-      Nº_do_Processo_TCE: ['TCE-', Validators.required],
+      processoTCE: new FormControl,
       // tslint:disable-next-line:new-parens
-      Link_do_Redmine: ['', Validators.required],
+      linkRedmine: new FormControl,
       // tslint:disable-next-line:new-parens
-      Objeto_de_Acordo: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]]
+      objetoAcordo: new FormControl,
     });
   }
+
+
+  // tslint:disable-next-line:typedef
+  // validations(){
+  //   this.registerForm = this.fb.group({
+  //     // tslint:disable-next-line:new-parens
+  //     Data_de_início_da_vigência: ['', Validators.required],
+  //     // tslint:disable-next-line:new-parens
+  //     Data_de_fim_da_vigência: ['', Validators.required],
+  //     // tslint:disable-next-line:new-parens
+  //     Nº_do_Processo_TCE: ['TCE-', Validators.required],
+  //     // tslint:disable-next-line:new-parens
+  //     Link_do_Redmine: ['', Validators.required],
+  //     // tslint:disable-next-line:new-parens
+  //     Objeto_de_Acordo: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]]
+  //   });
+  // }
 
   // tslint:disable-next-line:typedef
   salvarAlteracao(){
