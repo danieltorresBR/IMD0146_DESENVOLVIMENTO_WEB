@@ -1,6 +1,9 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { from } from 'rxjs';
 import { ContratoService } from '../_services/contrato.service';
+import{ defineLocale, BsLocale } from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-contratos',
@@ -11,13 +14,20 @@ export class ContratosComponent implements OnInit {
   contratosFiltrados: any = [];
   contratos: any = [];
   modalRef!: BsModalRef;
+  registerForm!: FormGroup;
+  registerFormControl!: FormControl;
 
   _filtroLista!: string;
+
+  get f(): any {
+    return this.registerForm.controls;
+  }
 
   constructor(
     private contratoService: ContratoService
     // tslint:disable-next-line:align
-    , private modalService: BsModalService
+    , private modalService: BsModalService,
+    private fb: FormBuilder
     ) { }
 
   get filtroLista(): string {
@@ -36,6 +46,7 @@ export class ContratosComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
+    this.validation();
     this.getContratos();
   }
 
@@ -45,6 +56,28 @@ export class ContratosComponent implements OnInit {
       contrato => contrato.processoTCE.indexOf(filtrarPor) !== -1
     );
   }
+
+  // tslint:disable-next-line:typedef
+  validation(){
+    this.registerForm = this.fb.group({
+      // tslint:disable-next-line:new-parens
+      Data_de_início_da_vigência: ['', Validators.required],
+      // tslint:disable-next-line:new-parens
+      Data_de_fim_da_vigência: ['', Validators.required],
+      // tslint:disable-next-line:new-parens
+      Nº_do_Processo_TCE: ['TCE-', Validators.required],
+      // tslint:disable-next-line:new-parens
+      Link_do_Redmine: ['', Validators.required],
+      // tslint:disable-next-line:new-parens
+      Objeto_de_Acordo: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]]
+    });
+  }
+
+  // tslint:disable-next-line:typedef
+  salvarAlteracao(){
+
+  }
+
 
   // tslint:disable-next-line:typedef
   getContratos() {

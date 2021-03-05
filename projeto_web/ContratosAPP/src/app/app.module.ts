@@ -5,7 +5,9 @@ import { ModalModule} from 'ngx-bootstrap/modal';
 import { TooltipModule} from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 import { AppComponent } from './app.component';
 import { ContratosComponent } from './contratos/contratos.component';
@@ -31,6 +33,9 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     FormsModule,
     BrowserAnimationsModule,
     AccordionModule.forRoot(),
+    ReactiveFormsModule,
+    CommonModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
