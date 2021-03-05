@@ -3,7 +3,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { from } from 'rxjs';
 import { ContratoService } from '../_services/contrato.service';
-import{ defineLocale, BsLocale } from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-contratos',

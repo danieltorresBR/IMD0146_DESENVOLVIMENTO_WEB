@@ -1,8 +1,7 @@
 <div class="form-inline">
   <div class="form-group mb-2">
     <label class="mr-2"> Filtrar: </label> <input type="text" class="form-group mx-sm-3 mb-2" placeholder="Nº do Processo TCE" 
-    [(ngModel)]="filtroLista"
-    >
+    [(ngModel)]="filtroLista">
   </div>
 </div>
 <h3>Filtro: {{filtroLista}}</h3>
@@ -69,64 +68,88 @@
   <div class="form-row">
     <div class="form-group col-md-2">
       <label>Data de início da vigência</label>
-      <input type="date" class="form-control"
-      [ngClass]="{'is-invalid': f.dataInicioVigencia.errors && f.dataInicioVigencia.touched }"
-      formControlame="Data de início da vigência" placeholder="dd/mm/aaaa">
-      <div *ngIf="f.dataInicioVigencia.errors?.required && f.dataInicioVigencia.touched" class="invalid-feedback">
+      <input type="date" class="form-control" formControlName="Data de início da vigência" placeholder="dd/mm/aaaa">
+      <div class="invalid-feedback">
         Data início da vigência é um campo obrigatório.
       </div> 
-    </div>
-  </div>  
-  <div class="form-row">
-    <div class="form-group col-md-2">
-      <label>Data de fim da vigência</label>
-      <input type="date" class="form-control"
-      [ngClass]="{'is-invalid': f.dataFimVigencia.errors && f.dataFimVigencia.touched }"
-      formControlame="Data de fim da vigência" placeholder="dd/mm/aaaa">
-      <div *ngIf="f.dataFimVigencia.errors?.required && f.dataFimVigencia.touched" class="invalid-feedback">
-        Data Fim da vigência é um campo obrigatório.
+      <!-- <input type="date" class="form-control" 
+        [ngClass]="{'is-invalid': f.dataInicioVigencia.errors && f.dataInicioVigencia.touched }"
+        formControlName="Data de início da vigência" placeholder="dd/mm/aaaa">
+        <div *ngIf="f.dataInicioVigencia.errors.required && f.dataInicioVigencia.touched" class="invalid-feedback">
+          Data início da vigência é um campo obrigatório.
+        </div>  -->
       </div>
     </div>
     
-    <div class="form-group col-md-2">
-      <label>Nº do Processo TCE</label>
-      <input type="text" class="form-control" 
-      [ngClass]="{'is-invalid': f.processoTCE.errors && f.processoTCE.touched }"
-      formControlame="Nº do Processo TCE" placeholder="TCE-XXX_XXX">
-      <div *ngIf="f.processoTCE.errors?.required && f.processoTCE.touched" class="invalid-feedback">
-        Nº do Processo TCE possui no máx. 11 caracteres.
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label>Data de fim da vigência</label>
+        <input type="date" class="form-control" formControlName="Data de fim da vigência" placeholder="dd/mm/aaaa">
+        <div class="invalid-feedback">
+          Data Fim da vigência é um campo obrigatório.
+        </div> 
+        <!-- <input type="date" class="form-control" 
+          [ngClass]="{'is-invalid': f.dataFimVigencia.errors && f.dataFimVigencia.touched }"
+          formControlName="Data de fim da vigência" placeholder="dd/mm/aaaa">
+          <div *ngIf="f.dataFimVigencia.errors?.required && f.dataFimVigencia.touched" class="invalid-feedback">
+            Data Fim da vigência é um campo obrigatório.
+          </div>  -->
+        </div>
       </div>
-    </div>
-  </div>  
-  
-  <div class="form-row">
-    
-    <div class="form-group col-md-6">
-      <label>Link do Redmine</label>
-      <input type="text" class="form-control"
-      [ngClass]="{'is-invalid': f.linkRedmine.errors && f.linkRedmine.touched }"
-      formControlame="Link do Redmine" placeholder="https://redmine.tce.rn.gov.br/">
-      <div *ngIf="f.linkRedmine.errors?.required && f.linkRedmine.touched" class="invalid-feedback">
-        Link do Redmine é um campo obrigatório.
-      </div>
-    </div>
-    
-    <div class="form-group col-md-12">
-      <label>Objeto de Acordo</label>
-      <input type="text" class="form-control"
-      [ngClass]="{'is-invalid': f.objetoAcordo.errors && f.objetoAcordo.touched }"
-      formControlame="Objeto de Acordo" placeholder="limite de 50 caracteres">
-      <div *ngIf="f.objetoAcordo.errors?.required" class="invalid-feedback">
-        Objeto de Acordo é um campo obrigatório.
-      </div>
-      <div *ngIf="f.objetoAcordo.errors?.minlength" class="invalid-feedback">
-        Objeto de Acordo deve possuir no min. 10 caracteres.
-      </div>
-      <div *ngIf="f.objetoAcordo.errors?.maxlength" class="invalid-feedback">
-        Objeto de Acordo deve possuir no max. 50 caracteres.
-      </div>
-    </div>
-  </div>  
+      
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label>Nº do Processo TCE</label>
+          <input type="text" class="form-control" formControlName="Nº do Processo TCE" placeholder="TCE-XXX_XXX">
+          <div class="invalid-feedback">
+            Nº do Processo TCE é um campo obrigatório.
+          </div>
+          <!-- <input type="text" class="form-control"  
+            [ngClass]="{'is-invalid': f.processoTCE.errors && f.processoTCE.touched }"
+            formControlName="Nº do Processo TCE" placeholder="TCE-XXX_XXX">
+            <div *ngIf="f.processoTCE.errors?.required && f.processoTCE.touched" class="invalid-feedback">
+              Nº do Processo TCE possui no máx. 11 caracteres.
+            </div> -->
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Link do Redmine</label>
+            <input type="text" class="form-control" formControlName="Link do Redmine" placeholder="https://redmine.tce.rn.gov.br/">
+            <div class="invalid-feedback">
+              Link do Redmine é um campo obrigatório.
+            </div>
+            <!-- <input type="text" class="form-control" 
+              [ngClass]="{'is-invalid': f.linkRedmine.errors && f.linkRedmine.touched }"
+              formControlName="Link do Redmine" placeholder="https://redmine.tce.rn.gov.br/">
+              <div *ngIf="f.linkRedmine.errors?.required && f.linkRedmine.touched" class="invalid-feedback">
+                Link do Redmine é um campo obrigatório.
+              </div> -->
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label>Objeto de Acordo</label>
+              <input type="text" class="form-control" formControlName="Objeto de Acordo" placeholder="limite de 50 caracteres">
+              <div class="invalid-feedback">
+                Objeto de Acordo é um campo obrigatório.
+              </div>
+              <!-- <input type="text" class="form-control" 
+                [ngClass]="{'is-invalid': f.objetoAcordo.errors && f.objetoAcordo.touched }"
+                formControlName="Objeto de Acordo" placeholder="limite de 50 caracteres">
+                <div *ngIf="f.objetoAcordo.errors.required" class="invalid-feedback">
+                  Objeto de Acordo é um campo obrigatório.
+                </div> -->
+                <!-- <div *ngIf="f.objetoAcordo.errors.minlength" class="invalid-feedback">
+                  Objeto de Acordo deve possuir no min. 10 caracteres.
+                </div>
+                <div *ngIf="f.objetoAcordo.errors.maxlength" class="invalid-feedback">
+                  Objeto de Acordo deve possuir no max. 50 caracteres.
+                </div> -->
+              </div>
+            </div>     
 </form>
 <br>
 <button class="btn btn-secondary" (click)="openModal(template)">
@@ -140,3 +163,4 @@
 
 <!-- <p>Form Values: {{registerForm.value | json}}</p>
 <p>Form Status: {{registerForm.status | json}}</p> -->
+            
