@@ -4,6 +4,8 @@ import { ContratoService } from '../_services/contrato.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { from } from 'rxjs';
+import { ContratoInterface } from '../_models/ContratoInterface';
+import { templateJitUrl } from '@angular/compiler';
 
 
 @Component({
@@ -13,7 +15,7 @@ import { from } from 'rxjs';
 })
 export class ContratosComponent implements OnInit {
   contratosFiltrados: any = [];
-  contratos: any = [];
+  contratos!: ContratoInterface[];
   registerForm!: FormGroup;
   registerFormControl!: FormControl;
 
@@ -99,14 +101,5 @@ export class ContratosComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   getContratos() {
-    this.contratoService.getAllContratos().subscribe(
-      response => {
-      this.contratos = response;
-      this.contratosFiltrados = this.contratos;
-      console.log(response);
-    }, error => {
-      console.log(error);
-    }
-    );
   }
 }

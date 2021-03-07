@@ -19,7 +19,7 @@ export class ContratoService {
       return this.http.get<ContratoInterface[]>('${this.baseURL}/getByContratoTCE/${processoTCE}');
     }
   // tslint:disable-next-line:typedef
-  getContratosById(id: number): Observable<ContratoInterface[]> {
-    return this.http.get<ContratoInterface[]>('${this.baseURL}/${id}');
+  getContratosById(id: number): Observable<ContratoInterface> {
+    return this.http.get<ContratoInterface>('${this.baseURL}/${id}');
   }
 }

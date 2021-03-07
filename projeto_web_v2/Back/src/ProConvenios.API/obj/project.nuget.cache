@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hn2AsS/ncBNp4rxRC/AX4TEt4/BvzMPcl4N4IULLg3LlCQjTTpXaZ2dtafVkiUguOzr79t42YxBZZcvpEBm49A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\PROCONVENIOS\\Back\\src\\ProConvenios.API\\ProConvenios.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danieltorresdev\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\danieltorresdev\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\danieltorresdev\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\danieltorresdev\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\danieltorresdev\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\danieltorresdev\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
