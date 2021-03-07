@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\PROCONVENIOS\\Back\\src\\ProConvenios.API\\ProConvenios.API.csproj": {}
+    "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web_v2\\Back\\src\\ProConvenios.API\\ProConvenios.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\PROCONVENIOS\\Back\\src\\ProConvenios.API\\ProConvenios.API.csproj": {
+    "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web_v2\\Back\\src\\ProConvenios.API\\ProConvenios.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\PROCONVENIOS\\Back\\src\\ProConvenios.API\\ProConvenios.API.csproj",
+        "projectUniqueName": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web_v2\\Back\\src\\ProConvenios.API\\ProConvenios.API.csproj",
         "projectName": "ProConvenios.API",
-        "projectPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\PROCONVENIOS\\Back\\src\\ProConvenios.API\\ProConvenios.API.csproj",
+        "projectPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web_v2\\Back\\src\\ProConvenios.API\\ProConvenios.API.csproj",
         "packagesPath": "C:\\Users\\danieltorresdev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\PROCONVENIOS\\Back\\src\\ProConvenios.API\\obj\\",
+        "outputPath": "C:\\Users\\danieltorresdev\\Documents\\Workspaces\\WorkspaceResidenciaIMD\\IMD0146_DESENVOLVIMENTO_WEB\\projeto_web_v2\\Back\\src\\ProConvenios.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danieltorresdev\\AppData\\Roaming\\NuGet\\NuGet.Config"
