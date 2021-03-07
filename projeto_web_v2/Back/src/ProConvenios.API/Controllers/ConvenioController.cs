@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ProConvenios.API.Data;
 using ProConvenios.API.Models;
 
 namespace ProConvenios.API.Controllers
@@ -12,39 +13,23 @@ namespace ProConvenios.API.Controllers
     [Route("api/[controller]")]
     public class ConvenioController : ControllerBase
     {
-        public IEnumerable<Convenio> _convenio = new Convenio[] {
-                new Convenio() {
-                    ConvenioId = 1,
-                    DtInicio = DateTime.Now.AddDays(0).ToString(),
-                    DtFim = DateTime.Now.AddDays(365).ToString(),
-                    ProcessoTCE = "TCE_001-002",
-                    LinkRedmine = "www.google.com.br/001",
-                    ObjetoAcordo =  "Este é um teste de acordo"
-                },
-                new Convenio() {
-                    ConvenioId = 2,
-                    DtInicio = DateTime.Now.AddDays(-2).ToString(),
-                    DtFim = DateTime.Now.AddDays(363).ToString(),
-                    ProcessoTCE = "TCE_001-003",
-                    LinkRedmine = "www.terra.com.br/aaa",
-                    ObjetoAcordo =  "Este é um teste de acordo para evento 002"
-                }                 
-        };
-        
-        public ConvenioController()
+        private readonly DataContext _context;
+
+        public ConvenioController(DataContext context)
         {
+            this._context = context;
         }
 
         [HttpGet]
         public IEnumerable<Convenio> Get()
         {
-            return _convenio;
+            return _context.Convenios;
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<Convenio> GetById(int id)
+        public Convenio GetById(int id)
         {
-            return _convenio.Where(convenio => convenio.ConvenioId == id);
+            return _context.Convenios.FirstOrDefault(convenio => convenio.ConvenioId == id);
         }
 
         [HttpPost]
@@ -63,7 +48,7 @@ namespace ProConvenios.API.Controllers
         public string Delete(int id)
         {
             return $"Exemplo de Delete com id = {id}";
-        }     
+        }
 
     }
 }
